@@ -8,11 +8,14 @@
 public class Fragment_Comparison
 {
     int [len1][len2] table = 0;
-    int len1 = 0;
     int len2 = 0;
     public static void main(String args[])
-    {    
-        for(i = 0; i < (len1*len2); i++)
+    {
+        for (len1 = 0; len1 < len1.length; len1++)
+        {
+            //subtract 1 from every row and column. Ex. col1 = -1, col2 = -2, etc.
+        }
+        for(int i = 0; i < (len1*len2); i++)
         {
             if (table[len1] != table[len2])
             {
@@ -22,6 +25,7 @@ public class Fragment_Comparison
             {
                 return 1;
             }
+            //Add values together
         }
     }
 }
