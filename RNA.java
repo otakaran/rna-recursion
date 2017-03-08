@@ -38,27 +38,6 @@ public class RNA
         int[][] table = new int[len1 + 1][len2 + 1];
         int value;
         
-        /**
-        if (len1 == len2)
-        {
-            int[][] table = new int[len1 + 1][len2 + 1];
-        }
-        else if (len1 < len2)
-        {
-            int[][] table = new int[len2 + 1][len2 + 1];
-        }
-        else if (len2 < len1)
-        {
-            int[][] table = new int[len1 + 1][len1 + 1];
-        }
-        else
-        {
-            System.out.print("ERROR 1 - ");
-            System.out.print(len1);
-            System.out.print(len2);
-        }
-        */
-        
         // Generate the outline of the matrix
         table[0][0]= 0;
         for (int i = 1; i <= len1; i++) 
