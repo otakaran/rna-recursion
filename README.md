@@ -2,6 +2,7 @@
 [![Code Climate](https://codeclimate.com/github/otakar-sst/rna-recursion/badges/gpa.svg)](https://codeclimate.com/github/otakar-sst/rna-recursion)
 [![Issue Count](https://codeclimate.com/github/otakar-sst/rna-recursion/badges/issue_count.svg)](https://codeclimate.com/github/otakar-sst/rna-recursion)
 [![Test Coverage](https://codeclimate.com/github/otakar-sst/rna-recursion/badges/coverage.svg)](https://codeclimate.com/github/otakar-sst/rna-recursion/coverage)
+[![codebeat badge](https://codebeat.co/badges/9fc558cf-9952-48d2-8434-a4a0f91410b0)](https://codebeat.co/projects/github-com-otakar-sst-rna-recursion)
 ###### A program that checks RNA similarity coded in Java for CSA
 ![Image of RNA](http://www.umichrna.org/wp-content/uploads/2016/01/rna-slide.jpg)
 
