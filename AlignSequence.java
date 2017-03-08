@@ -2,7 +2,7 @@
 import java.lang.Math;
 import java.util.Arrays;
 
-public class RNA
+public class AlignSequence
 {
     // instance variables - replace the example below with your own
     static String seq1 = "ABC";
@@ -11,7 +11,7 @@ public class RNA
     /**
      * Constructor for objects of class RNA
      */
-    public RNA()
+    public AlignSequence()
     {
         // initialise instance variables
     }
