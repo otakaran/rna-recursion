@@ -85,21 +85,16 @@ public class RNA
                     value = -1;
                 }
                 
-                table[i][j] = java.lang.Math.max((table[i][j-1] - 1), (table[i-1][j] - 1), (table[i-1][j-1] + value));
+                table[i][j] = java.lang.Math.max((table[i][j-1] - 1), java.lang.Math.max((table[i-1][j] - 1), (table[i-1][j-1] + value)));
             }
         }
         
+        printMatrix(table);
         
         // Generate remainder based on rules
         return 1;
     }
-    
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
+
     public static void main()
     {
         generateMatrix();
