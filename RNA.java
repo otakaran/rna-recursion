@@ -1,10 +1,7 @@
+// Import math for :)
+import java.lang.Math;
+import java.util.Arrays;
 
-/**
- * Write a description of class RNA here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class RNA
 {
     // instance variables - replace the example below with your own
@@ -39,6 +36,7 @@ public class RNA
         int len2 = seq2.length();
         
         int[][] table = new int[len1 + 1][len2 + 1];
+        int value;
         
         /**
         if (len1 == len2)
@@ -73,6 +71,24 @@ public class RNA
         }
         
         printMatrix(table);
+        
+        for (int i = 1; i <= len1; i++) 
+        {
+            for (int j = 1; j <= len2; j++) 
+            {
+                if (seq1.charAt(i-1) == seq2.charAt(j-1)) 
+                {
+                    value = 1;
+                }
+                else 
+                {
+                    value = -1;
+                }
+                
+                table[i][j] = java.lang.Math.max((table[i][j-1] - 1), (table[i-1][j] - 1), (table[i-1][j-1] + value));
+            }
+        }
+        
         
         // Generate remainder based on rules
         return 1;
