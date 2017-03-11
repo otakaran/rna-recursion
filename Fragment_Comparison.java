@@ -7,26 +7,61 @@
  */
 public class Fragment_Comparison
 {
-    int [len1][len2] table = 0;
-    int len2 = 0;
-    public static void main(String args[])
+    int len1 = 5;
+    int len2 = 5;
+    public void main()
     {
-        for (len1 = 0; len1 < len1.length; len1++)
-        {
-            //subtract 1 from every row and column. Ex. col1 = -1, col2 = -2, etc.
+        int [][] table = new int [len1][len2];
+        int col = 1;
+        int row = 1;
+        int a;
+        int b;
+        int c;
+        while (col < len2) {
+            for (int i = 1; i < len2; i++) {
+                if(table[0][i] == table[col][0]) {
+                    table[col][i] = 1;
+                } else {
+                    table[col][i] = -1;
+                }
+            }
+            col++;
         }
-        for(int i = 0; i < (len1*len2); i++)
-        {
-            if (table[len1] != table[len2])
-            {
-                return -1;
+        while(row < len2){
+            for (int colm = 1; colm < len1; colm++) {
+                if (row == 1) {
+                    if (colm != 4){
+                        table[row][colm + 1] += table[row][colm];
+                    }
+                } else {
+                    if (colm == 1) {
+                        table[row][colm] += table[row - 1][colm];
+                    } else {
+                        if (table[0][colm] == table[row][0]) {
+                            a = table[row][colm] + table[row - 1][colm];
+                            b = table[row][colm] + table[row - 1][colm - 1];
+                            c = table[row][colm] + table[row][colm - 1];
+                            if (a > b && a > c){
+                                table[row][colm] += table[row - 1][colm];
+                            } else if (b > a && b > c) {
+                                table[row][colm] += table[row - 1][colm - 1];
+                            } else {
+                                table[row][colm] += table[row][colm - 1];
+                            }
+                        } else {
+                            a = table[row][colm] + table[row - 1][colm];
+                            //Umair Zaidi
+                            b = table[row][colm] + table[row][colm - 1];
+                            if (a > b){
+                                table[row][colm] += table[row - 1][colm];
+                            } else {
+                                table[row][colm] += table[row][colm - 1];
+                            }
+                        }
+                    }
+                }
             }
-            if (table[len1] == table[len2])
-            {
-                return 1;
-            }
-            //Add values together
+            row++;
         }
     }
 }
-
