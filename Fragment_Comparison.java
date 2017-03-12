@@ -50,7 +50,7 @@ public class Fragment_Comparison
                             }
                         } else {
                             a = table[row][colm] + table[row - 1][colm];
-                            //Umair Zaidi
+                            
                             b = table[row][colm] + table[row][colm - 1];
                             if (a > b){
                                 table[row][colm] += table[row - 1][colm];
