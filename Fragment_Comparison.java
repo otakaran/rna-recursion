@@ -62,6 +62,11 @@ public class Fragment_Comparison
                 }
             }
             row++;
+            for (int i = 1; i < len1; i++) {
+                for (int j = 1; j < len2; j++) {
+                    System.out.println(table[i][j]);
+                }
+            }
         }
     }
 }
