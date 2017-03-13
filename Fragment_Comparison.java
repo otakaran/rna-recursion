@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class Fragment_Comparison here.
  * 
@@ -17,6 +16,14 @@ public class Fragment_Comparison
         int a;
         int b;
         int c;
+        table[0][1] = 0;
+        table[0][2] = 1;
+        table[0][3] = 2;
+        table[0][4] = 1;
+        table[1][0] = 0;
+        table[2][0] = 1;
+        table[3][0] = 1;
+        table[4][0] = 1;
         while (col < len2) {
             for (int i = 1; i < len2; i++) {
                 if(table[0][i] == table[col][0]) {
@@ -50,7 +57,7 @@ public class Fragment_Comparison
                             }
                         } else {
                             a = table[row][colm] + table[row - 1][colm];
-                            
+
                             b = table[row][colm] + table[row][colm - 1];
                             if (a > b){
                                 table[row][colm] += table[row - 1][colm];
@@ -62,10 +69,10 @@ public class Fragment_Comparison
                 }
             }
             row++;
-            for (int i = 1; i < len1; i++) {
-                for (int j = 1; j < len2; j++) {
-                    System.out.println(table[i][j]);
-                }
+        }
+        for (int i = 1; i < len1; i++) {
+            for (int j = 1; j < len2; j++) {
+                System.out.println(table[i][j]);
             }
         }
     }
