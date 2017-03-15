@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Fragment_Comparison
+public class FragmentComparison
 {
     int len1 = 5;
     int len2 = 5;
