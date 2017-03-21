@@ -3,6 +3,14 @@ import java.lang.Math;
 import java.util.Arrays;
 
 /**
+ * Aligns a sequence and returns the value
+ * 
+ * @author Otakar Andrysek and Vikas A.
+ * @date 3/21/2017
+ * @version 12.0
+ */
+
+/**
 * Constructor for objects of class RNA
 */
 public class AlignSequence
@@ -159,7 +167,6 @@ public class AlignSequence
         {
             alignedseq1 = "" + seq1.charAt(i-1);
             alignedseq2 = "-";
-
             i -= 1;
         }
 
@@ -180,7 +187,7 @@ public class AlignSequence
     {
         int[][] table = new int[len1 + 1][len2 + 1];
         table = generateMatrix();
-        FindPath(3,3);
+        FindPath(len1,len2);
         printMatrix(table);
         //printStrings();
         printValue(table);
