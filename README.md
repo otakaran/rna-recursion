@@ -39,4 +39,4 @@ Keep you work uploaded in your team files folder.
 
 ##### Credit
 - Otakar Andrysek
-- Vikas [LASTNAME]
+- Vikas A.
